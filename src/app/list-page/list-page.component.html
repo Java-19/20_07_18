@@ -1,0 +1,16 @@
+<h2>List page</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of items"
+        >
+        <a routerLink="/list/item"
+           [queryParams]="{title:item.title,age:item.age}">{{item.title}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
